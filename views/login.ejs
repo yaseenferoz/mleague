@@ -1,0 +1,31 @@
+<div class="card card-4">
+    <div class="card-body">
+      <!-- Login Form -->
+
+
+      <h2 id="demo"></h2>
+      <form  action="/login" method="post" autocomplete="off">
+
+        <div class="row row-space">
+            <div class="col-2">
+                <div class="input-group">
+                    <label class="label">Admin username</label>
+                    <input required  oninvalid="this.setCustomValidity('Please enter  username')"  oninput="setCustomValidity('')" class=" form-control input--style-4"   type="text"  name="adminName" placeholder="Admin userame" >
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="input-group">
+                    <label class="label">Admin Password</label>
+                    <input  oninvalid="this.setCustomValidity('Please Enter Password')" class="input--style-4" type="password" name="adminPassword" placeholder="Admin Password" >
+                </div>
+                </div>
+                <div class="p-t-15">
+                    <button class="btn btn--radius-2 btn--blue" type="submit">Login</button>
+                </div>
+      </form>
+  
+      <!-- Remind Passowrd -->
+
+  
+    </div>
+  </div>

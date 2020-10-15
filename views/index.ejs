@@ -1,0 +1,137 @@
+
+        <div class="card card-4">
+            <div class="card-body">
+                <img src="./images/logo.png" style="width: 100px;" alt="logo" >
+                <h1 class="title"> MPL Player Register Application</h1>
+                <hr  style="height:2px;border-width:0; border-radius: 100px; color:gray;background-color:gray ;" >
+                <br>
+               
+                <form action="/add" method="post" autocomplete="off">
+                    <input type="hidden" name="_id" value="<%=movie._id%>">
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Player name</label>
+                                <input required  oninvalid="this.setCustomValidity('Please enter your name')"  oninput="setCustomValidity('')" class=" form-control input--style-4"   type="text"  name="name" placeholder="Player's Full Name" value="<%=movie.name%>" >
+                            </div>
+                          
+                        </div>
+                        
+                        <!-- <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Email</label>
+                                <input  oninvalid="this.setCustomValidity('Please Enter valid email')" class="input--style-4" type="email" name="email" placeholder="Email" value="<%=movie.email%>">
+                            </div>
+                         
+                        </div> -->
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Contact Number</label>
+                                <input class="input--style-4" type="text"  name="mobile" placeholder="Contact Number" value="<%=movie.mobile%>">
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">City / Village</label>
+                                <input class="input--style-4" type="text"  name="city" placeholder="City or Village" value="<%=movie.city%>">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                        <label class="label">Player type</label>
+                        <div class="rs-select2 js-select-simple select--no-search">
+                            <select name="playerType">
+                                <option value="Batsman">Batsman</option>
+                                <option value="Bowler">Bowler</option>
+                                <option value="All Rounder">All rounder</option>
+                            </select>
+                            <div class="select-dropdown"></div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- <div class="row row-space">
+                        <!-- <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Birthday</label>
+                                <div class="input-group-icon">
+                                    <input class="input--style-4 js-datepicker" type="text" name="birthday">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Gender</label>
+                                <div class="p-t-10">
+                                    <label class="radio-container m-r-45">Male
+                                        <input type="radio" checked="checked" name="optradio" value="Male">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">Female
+                                        <input type="radio"name="optradio" value="Female">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>-->
+                    <!-- </div> -->
+                    <div class="ui field">
+                        <label for="img" class="label">Upload Your Photograph</label>
+                        <input  required="true" oninvalid="this.setCustomValidity('Please upload Image')" type="file" name="img" id="img" class="filepond filepond--item">
+
+                    <div class="input-group">
+                      
+                            <div class="input-group">
+                                <label class="label">Payment Done through Mobile No. Using( UPI,googlepay,phonepay,paytm)</label>
+                                <input class="input--style-4" type="text"  name="upiNumber" placeholder="Payment Mobile No. " value="<%=movie.upiNumber%>">
+                                <label class="label">UPI Payment No. <a href="tel:9902371655" style="text-decoration: none;"><strong>9902371655</strong></a></label>
+                            </div>
+                       
+                    </div>
+
+
+                    
+                    
+                    <div class="p-t-15">
+                        <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+<!-- <form action="/add" method="post" autocomplete="off" >
+   
+   <input type="hidden" name="_id" value="<%=movie._id%>">
+       <div class="form-group"><label for="">Full Name</label>
+       <input type="text" class="form-control" name="name" placeholder="Full Name" value="<%=movie.name%>">
+       <div class="text-danger">
+           <%=movie.nameError%>
+       </div>
+       </div>
+       <div class="form-group"><label for="">Email</label>
+       <input type="text" class="form-control" name="email" placeholder="Email" value="<%=movie.email%>">
+        <div class="text-danger">
+           <%=movie.emailError%>
+       </div>
+       </div>
+   
+   
+   
+    <div class="form-row">
+           <div class="form-group col-md-6"><label for="">Mobile</label>
+       <input type="text" class="form-control" name="mobile" placeholder="Mobile" value="<%=movie.mobile%>">
+       </div>
+       <div class="form-group col-md-6"><label for="">City</label>
+       <input type="text" class="form-control" name="city" placeholder="City" value="<%=movie.city%>">
+       </div>
+    </div>
+
+   <div class="ui field">
+    <label for="img">Image</label>
+    <input type="file" name="img" id="img" class="filepond filepond--item">
+</div><br><br>
+<button class="ui fluid blue button" type="submit">Save</button>
+   </form> -->
+

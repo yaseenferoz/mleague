@@ -1,0 +1,64 @@
+
+
+<h2 style="text-align: center; color: white;">List of the players who applied for MPL</h2><br>
+<div class="card card-4">
+
+    <form action="/selected" method="post">
+
+        <div  class="card-body">
+
+            <% if(movie) { %>
+
+            <% movie.forEach(m => { %>
+
+
+            <div  class="col-6">
+
+                <label  class="checkContainer"> &nbsp Select <strong> <%= m.name %></strong>
+                    <input  type="checkbox"  class="selectheckbox" name="plyername" value="<%= m._id %>">
+                    <span class="checkmark"></span>
+                </label>
+
+
+
+                <a href="/delete/<%=m._id %>" onclick="return confirm('Are You sure ?');"> <button type="button"
+                        class="btn" title="Delete" style="float: right; color: crimson;" onclick="javascript: {ddwrt:GenFireServerEvent(concat('__cancel;__delete={',$KeyField,'=',$KeyValue,'};__commit'))}" /> <i class="fa fa-trash-o"
+                            style="font-size:36px"></i></button>
+                 </a>
+
+                <img src="<%= m.coverImagePath %>" alt="" class="listImage" style="float: left; margin-right: 20px; ">
+                <div class="reocr">
+                    <h1 class="titleList" style="visibility: hidden"> Name:- <%= m.name %></h1>
+                    <p><strong>Contact No.:-</strong> <%= m.mobile %></p>
+                    <p><strong>City or Village:-</strong> <%= m.city %></p>
+                    <p><strong>Player Type:-</strong> <%= m.playerType %></p>
+                    <p><strong>Payment Number:-</strong> <%= m.upiNumber %></p>
+                </div>
+            </div><br><br><br><br>
+            <hr><br>
+
+            <% }) %>
+          
+            <% } %>
+            <button class="btn btn--radius-2 btn--blue select" type="submit"  disabled="disabled">Select Players</button>
+            
+        </div>
+    
+    </form>
+</div>
+<form action="/clearlist" method="post">
+    <input hidden type="text" name="fff">
+    <button style="background-color: red;" class="btn">Clear Selected Player List</button>
+   </form>
+
+<script src="https://code.jquery.com/jquery-1.6.2.min.js" integrity="sha256-0W0HoDU0BfzslffvxQomIbx0Jfml6IlQeDlvsNxGDE8=" crossorigin="anonymous"></script>
+
+<script>
+    $(function() {
+    $(".selectheckbox").click(function(){
+        $('.select').prop('disabled',$('input.selectheckbox:checked').length == 0);
+    });
+});
+
+
+</script>
